@@ -30,7 +30,8 @@ assertTrue(byLengthOrdering.reverse().isOrdered(list));
 使用  `Ordering.from(Comparator)`  传入一个Comparator 到Ordering非常简单  
 实现自定义的排序器时，除了用上面的 from 方法，也可以跳过实现 Comparator，而直接继承 Ordering：
 
-```
+```java
+
 Ordering<String> byLengthOrdering = new Ordering<String>() {
   public int compare(String left, String right) {
     return Ints.compare(left.length(), right.length());
@@ -52,7 +53,8 @@ Ordering<String> byLengthOrdering = new Ordering<String>() {
 
 例如，你需要下面这个类的排序器。
 
-```
+```java
+
 class Foo {
   @Nullable String sortedBy;
   int notSortedBy;
@@ -61,7 +63,8 @@ class Foo {
 
 考虑到排序器应该能处理 sortedBy 为 null 的情况，我们可以使用下面的链式调用来合成排序器：
 
-```
+```java
+
 Ordering<Foo> ordering = Ordering.natural().nullsFirst().onResultOf(new Function<Foo, String>() {
   public String apply(Foo foo) {
     return foo.sortedBy;
@@ -83,7 +86,8 @@ Ordering<Foo> ordering = Ordering.natural().nullsFirst().onResultOf(new Function
 
 用三个方法。此外，你也可以把 Function 分离成中间对象，让链式调用更简洁紧凑。
 
-```
+```java
+
 Ordering<Foo> ordering = Ordering.natural().nullsFirst().onResultOf(sortKeyFunction);
 ```
 
