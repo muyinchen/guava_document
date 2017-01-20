@@ -23,4 +23,5 @@
 * [第七章 Strings](第七章-strings.md)
 * [第八章 Networking](第八章-networking.md)
     * [InternetDomainName](internetdomainname.md)
+* [第九章 Primitives](第九章-primitives.md)
 
