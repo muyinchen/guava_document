@@ -19,4 +19,5 @@
 * [第五章 Functional Idioms](functional-idioms.md)
 * 第六章 Concurrency
     * [ListenableFuture](listenablefuture.md)
+    * [Service](service.md)
 
