@@ -55,7 +55,8 @@ JDK提供了`Collections.unmodifiableXXX`方法，但是在我们看来，这些
 
 * `Builder`工具，如
 
-```
+```java
+
 public static final ImmutableSet<Color> GOOGLE_COLORS =
        ImmutableSet.<Color>builder()
            .addAll(WEBSAFE_COLORS)
@@ -65,7 +66,8 @@ public static final ImmutableSet<Color> GOOGLE_COLORS =
 
 此外，对有序不可变集合来说，排序是在构造集合的时候完成的，如：
 
-```
+```java
+
 ImmutableSortedSet.of("a", "b", "c", "a", "d", "b");
 ```
 
@@ -75,7 +77,8 @@ ImmutableSortedSet.of("a", "b", "c", "a", "d", "b");
 
 请注意，`ImmutableXXX.copyOf` 方法会尝试在安全的时候避免做拷贝——实际的实现细节不详，但通常来说是很智能的，比如：
 
-```
+```java
+
 ImmutableSet<String> foobar = ImmutableSet.of("foo", "bar", "baz");
 thingamajig(foobar);
 
