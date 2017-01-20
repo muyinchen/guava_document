@@ -17,4 +17,6 @@
 * [第三章 Graphs](第三章-graphs.md)
 * [第四章 Caches](第四章-caches.md)
 * [第五章 Functional Idioms](functional-idioms.md)
+* 第六章 Concurrency
+    * [ListenableFuture](listenablefuture.md)
 
