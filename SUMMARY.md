@@ -12,24 +12,8 @@
 * [第二章 Collections](第二章-collections.md)
     * [不可变集合](immutablecollectionsexplained.md)
     * [New collection types](new-collection-types.md)
-      * [[Multiset|new-collection-types#multiset]]
-      * [[Multimap|new-collection-types#multimap]]
-      * [[BiMap|new-collection-types#bimap]]
-      * [[Table|new-collection-types#table]]
-      * [[ClassToInstanceMap|new-collection-types#classtoinstancemap]]
-      * [[RangeSet|new-collection-types#rangeset]]
     * [Utility Classes](utility-classes.md)
-      * [[Iterables|utility-classes#iterables]]
-      * [[Lists|utility-classes#lists]]
-      * [[Sets|utility-classes#sets]]
-      * [[Maps|utility-classes#maps]]
-      * [[Multisets|utility-classes#multisets]]
-      * [[Multimaps|utility-classes#multimaps]]
-      * [[Tables|utility-classes#tables]]
     * [Extension Utilities](extension-utilities.md)
-     * [[Forwarding Decorators|extension-utilities#forwarding-decorators]]
-      * [[PeekingIterator|extension-utilities#peekingiterator]]
-      * [[AbstractIterator|extension-utilities#abstractiterator]]
 * [第三章 Graphs](第三章-graphs.md)
 * [第四章 Caches](第四章-caches.md)
 * [第五章 Functional Idioms](functional-idioms.md)
