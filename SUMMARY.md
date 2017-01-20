@@ -13,4 +13,5 @@
     * [不可变集合](immutablecollectionsexplained.md)
     * [New collection types](new-collection-types.md)
     * [Utility Classes](utility-classes.md)
+    * [Extension Utilities](extension-utilities.md)
 
