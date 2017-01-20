@@ -1,6 +1,6 @@
 # 不可变集合
 
-```
+```java
 public static final ImmutableSet<String> COLOR_NAMES = ImmutableSet.of(
   "red",
   "orange",
