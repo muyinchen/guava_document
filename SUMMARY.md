@@ -16,5 +16,5 @@
     * [Extension Utilities](extension-utilities.md)
 * [第三章 Graphs](第三章-graphs.md)
 * [第四章 Caches](第四章-caches.md)
-    * [Functional Idioms](functional-idioms.md)
+* [第五章 Functional Idioms](functional-idioms.md)
 
