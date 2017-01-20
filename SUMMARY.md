@@ -7,6 +7,7 @@
     * [Optional](optional.md)
     * [Preconditions](preconditions.md)
     * [Ordering](ordering.md)
+    * [Object methods](object-methods.md)
 * [第二章 Collections](第二章-collections.md)
     * [不可变集合](immutablecollectionsexplained.md)
 
