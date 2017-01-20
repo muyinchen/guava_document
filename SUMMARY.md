@@ -34,4 +34,5 @@
     * [Release 21](release-21.md)
     * [Release 20](release-20.md)
     * [Release 19](release-19.md)
+    * [Release18](release18.md)
 
