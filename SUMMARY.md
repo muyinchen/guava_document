@@ -11,4 +11,5 @@
     * [Throwables](throwablesexplained.md)
 * [第二章 Collections](第二章-collections.md)
     * [不可变集合](immutablecollectionsexplained.md)
+    * [New collection types](new-collection-types.md)
 
