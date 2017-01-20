@@ -20,4 +20,5 @@
 * 第六章 Concurrency
     * [ListenableFuture](listenablefuture.md)
     * [Service](service.md)
+* [第七章 Strings](第七章-strings.md)
 
