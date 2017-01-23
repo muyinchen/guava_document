@@ -16,7 +16,7 @@ LoadingCache<Key, Graph> graphs = CacheBuilder.newBuilder()
 
 # Applicability
 
-Caches are tremendously useful in a wide variety of use cases.  For example, you should consider using caches when a value is expensive to compute or retrieve, and you will need its value on a certain input more than once.
+缓存在各种各样的用例中非常有用。 例如，当值计算或检索付出代价很高时，并且您将需要在某个需求上多次使用这个值，应考虑使用高速缓存。
 
 A `Cache` is similar to `ConcurrentMap`, but not quite the same.  The most fundamental difference is that a `ConcurrentMap` persists all elements that are added to it until they are explicitly removed. A `Cache` on the other hand is generally configured to evict entries automatically, in order to constrain its memory footprint. In some cases a `LoadingCache` can be useful even if it doesn't evict entries, due to its automatic cache loading.
 
