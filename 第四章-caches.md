@@ -37,10 +37,10 @@ _Note：_如果你不需要一个`Cache`的特性，`ConcurrentHashMap`更具内
 
 # Population
 
-The first question to ask yourself about your cache is: is there some _sensible default_ function to load or compute a value associated with a key?  If so, you should use a `CacheLoader`.  If not, or if you need to override the default, but you still want atomic "get-if-absent-compute" semantics, you should pass a `Callable` into a `get` call.  Elements can be inserted directly, using `Cache.put`, but automatic cache loading is preferred as it makes it easier to reason about consistency across all cached content.
-
+在使用缓存前，首先问自己一个问题：有没有合理的默认方法来加载或计算与键关联的值？ 如果有的话，你应该使用一个`CacheLoader`。 如果没有，或者如果你需要重写默认值，但你仍然想要原子的“get-if-absent-compute”语义，你应该在调用 `get `时传入一个 `Callable `实例。使用`Cache.put` 元素可以直接插入，但自动缓存加载是首选，因为它使得更容易推理所有缓存内容的一致性。
 ### From a [CacheLoader](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/cache/CacheLoader.html)
-A `LoadingCache` is a `Cache` built with an attached `CacheLoader`.  Creating a `CacheLoader` is typically as easy as implementing the method `V load(K key) throws Exception`.  So, for example, you could create a `LoadingCache` with the following code:
+
+`LoadingCache `是附带 `CacheLoader `构建而成的缓存实现。创建自己的 `CacheLoader `通常只需要简单地实现` V load(K key) throws Exception` 方法。例如，你可以用下面的代码构建 `LoadingCache`：
 
 ```java
 
