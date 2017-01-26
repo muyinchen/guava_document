@@ -61,8 +61,7 @@ try {
 }
 ```
 
-The canonical way to query a `LoadingCache` is with the method [get(K)](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/cache/LoadingCache.html#get(K)). This will either return an already cached value, or else use the cache's `CacheLoader` to atomically load a new value into the cache. Because `CacheLoader` might throw an `Exception`, `LoadingCache.get(K)` throws `ExecutionException`. If you have defined a `CacheLoader` that does _not_ declare any checked exceptions then you can perform cache lookups using `getUnchecked(K)`; however care must be taken not to call `getUnchecked` on caches whose `CacheLoader`s declare checked exceptions.
-
+查询`LoadingCache`的规范方法是使用方法[get(K)](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/cache/LoadingCache.html#get(K)。 这将返回一个已经缓存的值，否则使用缓存的“CacheLoader”来将新值原子地加载到缓存中。 因为`CacheLoader`可能抛出`Exception`，`LoadingCache.get（K）`也声明为抛出`ExecutionException`。 如果你定义了一个`CacheLoader`，它没有声明任何被检查的异常，那么你可以使用`getUnchecked（K）`执行缓存查找; 但是必须注意一旦 CacheLoader 声明了检查型异常，就不可以调用`getUnchecked`。
 ```java
 
 LoadingCache<Key, Graph> graphs = CacheBuilder.newBuilder()
