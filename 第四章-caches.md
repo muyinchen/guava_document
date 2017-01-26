@@ -18,19 +18,22 @@ LoadingCache<Key, Graph> graphs = CacheBuilder.newBuilder()
 
 缓存在各种各样的用例中非常有用。 例如，当值计算或检索付出代价很高时，并且您将需要在某个需求上多次使用这个值，应考虑使用高速缓存。
 
-A `Cache` is similar to `ConcurrentMap`, but not quite the same.  The most fundamental difference is that a `ConcurrentMap` persists all elements that are added to it until they are explicitly removed. A `Cache` on the other hand is generally configured to evict entries automatically, in order to constrain its memory footprint. In some cases a `LoadingCache` can be useful even if it doesn't evict entries, due to its automatic cache loading.
+`Cache`类似于`ConcurrentMap`，但也不完全相同。 最根本的区别是，一个`ConcurrentMap`持久化添加到它的所有元素，直到它们被显式删除。 另一方面，`Cache`通常配置为自动清除内容，以限制其内存占用。 在某些情况下，`LoadingCache`可能是有用的，即使它不清除内容，因为它会自动加载缓存。
 
-Generally, the Guava caching utilities are applicable whenever:
+一般来说，Guava缓存实用程序适用于：
 
-* You are willing to spend some memory to improve speed.
-* You expect that keys will sometimes get queried more than once.
-    * Your cache will not need to store more data than what would fit in RAM.  (Guava caches are **local** to a single run of your application.  They do not store data in files, or on outside servers.  If this does not fit your needs, consider a tool like [Memcached](http://memcached.org/).)
+*你愿意花一些内存空间来提高速度。
 
-If each of these apply to your use case, then the Guava caching utilities could be right for you!
+*你期望某些键有时会被查询不止一次。
 
-Obtaining a `Cache` is done using the `CacheBuilder` builder pattern as demonstrated by the example code above, but customizing your cache is the interesting part.
+*缓存中存放的数据总量不会超出内存容量。 （Guava Cache 是单个应用运行时的本地缓存。它不把数据存放到文件或外部服务器。如果这不符合你的需要，考虑一个工具，如[Memcached](http://memcached.org/)。
 
-_Note:_ If you do not need the features of a `Cache`, `ConcurrentHashMap` is more memory-efficient -- but it is extremely difficult or impossible to duplicate most `Cache` features with any old `ConcurrentMap`.
+如果这些都适用于你的用例，那么Guava缓存实用程序可能适合你！
+
+如上面的示例代码所示，使用`CacheBuilder`构建器模式来获取`Cache`，但是自定义缓存才是有趣的部分。
+
+_Note：_如果你不需要一个`Cache`的特性，`ConcurrentHashMap`更具内存效率 - 但 Cache 的大多数特性都很难基于旧有的 ConcurrentMap 来复制完成，甚至根本不可能做到。
+
 
 # Population
 
